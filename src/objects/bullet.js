@@ -1,6 +1,6 @@
 const nextPosition = (state, bullet) => ({
-  x: bullet.position.x + 1,
-  y: bullet.position.y,
+  x: bullet.position.x + bullet.velocity.x,
+  y: bullet.position.y + bullet.velocity.y,
 })
 
 const update = (state, bullet) =>
@@ -9,7 +9,7 @@ const update = (state, bullet) =>
   bullet.position.x > state.screen.width ||
   bullet.position.y > state.screen.height
     ? false
-    : {position: nextPosition(state, bullet)}
+    : {...bullet, position: nextPosition(state, bullet)}
 
 function draw(state, bullet) {
   const {context} = state

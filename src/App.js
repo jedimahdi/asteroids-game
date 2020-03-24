@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useReducer, useCallback} from 'react'
 import {id} from './utils/base'
+import {rotatePoint} from './utils/helpers'
 import * as Ship from './objects/ship'
 import * as Bullet from './objects/bullet'
 
@@ -16,6 +17,7 @@ const initialState = {
     },
     rotation: 0,
   },
+  lastShot: 0,
   bullets: [],
   keys: {
     right: false,
@@ -38,7 +40,30 @@ function reducer(state, action) {
       return {...state, keys: {...state.keys, ...action.keys}}
 
     case 'add_bullet':
-      return {...state, bullets: [...state.bullets, {position: {x: 5, y: 7}}]}
+      const posDelta = rotatePoint(
+        {x: 0, y: -20},
+        {x: 0, y: 0},
+        (state.ship.rotation * Math.PI) / 180,
+      )
+
+      const newBullet = {
+        position: {
+          x: state.ship.position.x + posDelta.x,
+          y: state.ship.position.y + posDelta.y,
+        },
+        velocity: {
+          x: posDelta.x / 2,
+          y: posDelta.y / 2,
+        },
+      }
+
+      return Date.now() - state.lastShot > 300
+        ? {
+            ...state,
+            lastShot: Date.now(),
+            bullets: [...state.bullets, newBullet],
+          }
+        : state
 
     case 'update':
       Ship.draw(state)
