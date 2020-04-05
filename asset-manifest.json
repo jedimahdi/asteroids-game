@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/asteroids-game/static/css/main.f0d11dae.chunk.css",
+    "main.js": "/asteroids-game/static/js/main.bcdb08ea.chunk.js",
+    "main.js.map": "/asteroids-game/static/js/main.bcdb08ea.chunk.js.map",
+    "runtime-main.js": "/asteroids-game/static/js/runtime-main.fda98710.js",
+    "runtime-main.js.map": "/asteroids-game/static/js/runtime-main.fda98710.js.map",
+    "static/js/2.0f82d927.chunk.js": "/asteroids-game/static/js/2.0f82d927.chunk.js",
+    "static/js/2.0f82d927.chunk.js.map": "/asteroids-game/static/js/2.0f82d927.chunk.js.map",
+    "index.html": "/asteroids-game/index.html",
+    "precache-manifest.7e07baa83f3a5b4973a28d27257bac61.js": "/asteroids-game/precache-manifest.7e07baa83f3a5b4973a28d27257bac61.js",
+    "service-worker.js": "/asteroids-game/service-worker.js",
+    "static/css/main.f0d11dae.chunk.css.map": "/asteroids-game/static/css/main.f0d11dae.chunk.css.map",
+    "static/js/2.0f82d927.chunk.js.LICENSE.txt": "/asteroids-game/static/js/2.0f82d927.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fda98710.js",
+    "static/js/2.0f82d927.chunk.js",
+    "static/css/main.f0d11dae.chunk.css",
+    "static/js/main.bcdb08ea.chunk.js"
+  ]
+}
