@@ -8,7 +8,7 @@ const update = (state, bullet) =>
   bullet.position.y < 0 ||
   bullet.position.x > state.screen.width ||
   bullet.position.y > state.screen.height
-    ? false
+    ? null
     : {...bullet, position: nextPosition(state, bullet)}
 
 function draw(state, bullet) {
