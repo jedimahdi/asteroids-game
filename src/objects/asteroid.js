@@ -1,5 +1,7 @@
 import {asteroidVertices} from '../utils/helpers'
 
+const update = (state) => state
+
 function draw(state) {
   const context = state.context
   context.save()
@@ -18,4 +20,4 @@ function draw(state) {
   context.restore()
 }
 
-export {draw}
+export {draw, update}

@@ -67,9 +67,8 @@ function reducer(state, action) {
 
     case 'update':
       Ship.draw(state)
-      // map()
-      const drawBullet = x => Bullet.draw(state, x)
-      const updateBullet = x => Bullet.update(state, x)
+      const drawBullet = (x) => Bullet.draw(state, x)
+      const updateBullet = (x) => Bullet.update(state, x)
       state.bullets.map(drawBullet)
 
       return {
@@ -138,8 +137,8 @@ function App() {
   }, [])
 
   useEffect(() => {
-    window.addEventListener('keyup', e => handleKeys(e, false))
-    window.addEventListener('keydown', e => handleKeys(e, true))
+    window.addEventListener('keyup', (e) => handleKeys(e, false))
+    window.addEventListener('keydown', (e) => handleKeys(e, true))
 
     requestAnimationFrame(() => {
       update()

@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "@architect/sandbox": "^1.8.3"
-  }
+    "gh-pages": "^2.2.0"
+  },
+  "homepage": "https://jedimahdi.github.io/asteroids-game"
 }
